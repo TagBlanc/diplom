@@ -1,53 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="/css/style.css" type="text/css">
-        <script src="/js/bootstrap.bundle.min.js"></script>
-        <script src="/js/jquery-3.6.0.min.js"></script>
-        <title>Library</title>
-    </head>
-    <body>
-        <!-- Навигационная панель -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Панель навигации</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Ссылка</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Выпадающий список
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Действие</a></li>
-                      <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Отключенная</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                  <button class="btn btn-outline-success" type="submit">Поиск</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-        <!-- Навигационная панель конец -->
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<script src="/js/bootstrap.bundle.min.js"></script>
+		<script src="/js/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="/css/style.css" type="text/css">
+		<title>Library</title>
+	</head>
+	<body>
+
+		<!-- Навигационная панель -->
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #182229;">
+			<div class="container-fluid">
+			<div class="logo">
+				<img src="/imgs/logo.jpg" alt="logo" height="35px" width="35px">
+			</div>
+			  <a class="navbar-brand" href="#">Библиотека</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item border border-2 rounded">
+					<a class="nav-link" aria-current="page" href="#">Учебники и книги</a>
+				  </li>
+				  <li class="nav-item border border-2 rounded">
+					<a class="nav-link" aria-current="page" href="#">Обратная связь</a>
+				  </li>
+				  <li class="nav-item border border-2 rounded">
+					<a class="nav-link" aria-current="page" href="#">Запись на получение книг</a>
+				  </li>
+				  <li class="nav-item border border-2 rounded">
+					<a class="nav-link" aria-current="page" href="#">Профиль</a>
+				  </li>
+				</ul>
+				<div class="login_registration">
+					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#login-modal">
+						Вход
+					  </button>
+					  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registration-modal">
+						Регистрация
+					  </button>
+				</div>
+				<form class="d-flex">
+				  <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+				  <button class="btn btn-secondary" type="submit">Поиск</button>
+				</form>
+			  </div>
+			</div>
+		  </nav>
+
+		<!-- Основная часть страницы -->
+		<div class="container">
+			<div class="row">
+			  <div class="col text-center">
+				Тест
+			  </div>
+			  <div class="col text-center">
+				Тест
+			  </div>
+			  <div class="col text-center">
+				Тест
+			  </div>
+			</div>
+		  </div>
+
+		   <!-- Окно входа -->
+		   <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<form> <!-- Форма входа -->
+						<div class="mb-3">
+						  <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+						<div class="mb-3">
+						  <label for="exampleInputPassword1" class="form-label">Пароль</label>
+						  <input type="password" class="form-control" id="exampleInputPassword1">
+						</div>
+						<button type="submit" class="btn btn-secondary">Отправить</button>
+					  </form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <!-- Окно регистрации -->
+		  <div class="modal fade" id="registration-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<form> <!-- Форма регистрации -->
+						<div class="mb-3">
+						  <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+						<div class="mb-3">
+						  <label for="exampleInputPassword1" class="form-label">Пароль</label>
+						  <input type="password" class="form-control" id="exampleInputPassword1">
+						</div>
+						<button type="submit" class="btn btn-secondary">Отправить</button>
+					  </form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</body>
 </html>
