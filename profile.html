@@ -36,10 +36,16 @@
 				<li class="nav-item border border-2 rounded mx-2">
 					<a class="nav-link btn btn-secondary" aria-current="page" href="/profile.html">Профиль</a>
 				</li>
-				<li class="nav-item border border-2 rounded mx-2">
-					<a class="nav-link btn btn-secondary" aria-current="page" href="/moderation.html">Модерация</a>
-				</li>
 				</ul>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					  Модерация
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					  <li><a class="dropdown-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#add_book">Добавить книгу</a></li>
+					  <li><a class="dropdown-item" href="/book_requests.html">Обработка запросов</a></li>
+					</ul>
+				  </div>
 				<div class="login_registration mx-2">
 					<button type="button" class="btn btn-secondary mx-1" data-bs-toggle="modal" data-bs-target="#login-modal">
 						Вход
@@ -57,10 +63,32 @@
 		</nav>
 
 		<!-- Основная часть страницы -->
-		<div class="container my-3 bg-light bg-opacity-75 border border-3 border-info rounded">
-			<div class="row">
-			  <div class="col text-center mx-3">
-				<span class="greetings_page">Тут будет профиль</span>
+		<div class="profile_badge container my-3">
+			<div class="row justify-content-between">
+			  <div class="col-5 bg-light bg-opacity-75 border border-3 border-info rounded text-left mx-3">
+				<span>Информация о профиле: (в случае, если ученик)</span><br>
+				<span class="profile_badge_info">ФИО:</span><br>
+				<span class="profile_badge_info">Класс:</span><br>
+				<span class="profile_badge_info">Почта:</span><br>
+				<span class="profile_badge_info">Пароль:</span><br>
+			  </div>
+
+			  <div class="col-5 bg-light bg-opacity-75 border border-3 border-info rounded text-left mx-3">
+				<span>Книги на руках: (в случае, если ученик)</span><br>
+				<div class="onhands_books d-flex justify-content-center">
+					<span class="onhands_books">*список книг*</span>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="profile_badge container my-3">
+			<div class="row justify-content-between">
+			  <div class="col-5 bg-light bg-opacity-75 border border-3 border-info rounded text-left mx-3">
+				<span>Информация о профиле: (в случае, если библиотекарь)</span><br>
+				<span class="profile_badge_info">ФИО:</span><br>
+				<span class="profile_badge_info">Почта:</span><br>
+				<span class="profile_badge_info">Пароль:</span><br>
 			  </div>
 			</div>
 		</div>
@@ -82,6 +110,45 @@
 								<div class="mb-3">
 									<label for="exampleInputPassword1" class="form-label">Сообщение</label>
 									<textarea type="password" class="form-control" id="exampleInputPassword1"></textarea>
+								</div>
+								<button type="submit" class="btn btn-secondary">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Окно добавления новой книги -->
+			<div class="modal fade add_book" id="add_book" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Добавить новую книгу</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+						</div>
+						<div class="modal-body">
+							<form> <!-- Форма добавления -->
+								<div class="input-group mb-3">
+									<label class="input-group-text" for="inputGroupFile01">Выберите файл книги</label>
+									<input type="file" class="form-control" id="inputGroupFile01">
+								</div>
+								<div class="row">
+									<div class="input-group mb-2">
+										<label class="input-group-text" for="exampleInputText">Автор</label>
+										<input type="text" placeholder="Формат заполнения: 'И. И. Иванович'" class="form-control" id="exampleInputText">
+									</div>
+								</div>
+								<div class="dropend my-2 row">
+									<div class="d-flex justify-content-start col-8">
+										<button class="btn btn-secondary dropdown-toggle col-8" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											Категория книги
+										</button>
+										<ul class="dropdown-menu justify-content-end" aria-labelledby="dropdownMenuButton1">
+											<li><a class="dropdown-item" href="#">Действие</a></li>
+											<li><a class="dropdown-item" href="#">Другое действие</a></li>
+											<li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+										</ul>
+									</div>
 								</div>
 								<button type="submit" class="btn btn-secondary">Отправить</button>
 							</form>
@@ -181,6 +248,11 @@
 						<div class="form-check form-switch my-3">
 							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_2" checked>
 							<label class="form-check-label" for="flexSwitchCheckChecked">Показать пароль</label>
+						</div>
+
+						<div class="form-check form-switch my-3">
+							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_2" checked>
+							<label class="form-check-label" for="flexSwitchCheckChecked">Согласие на обработку персональных данных</label>
 						</div>
 						<button type="submit" class="btn btn-secondary">Отправить</button>
 					</form>
