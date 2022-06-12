@@ -1,8 +1,10 @@
 <?php
 session_start();
 require_once "header.php";
+echo("<div class=\"container\">");
+if (!$_SESSION['admin'] || $_SESSION['student'] || $_SESSION['worker']){
 ?>
-    <div class="profile_badge container mt-4">
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-5 bg-light bg-opacity-75 border border-3 border-info rounded text-left mx-3 fs-5 p-3">
                 <form action="admin_auth.php" method="post">
@@ -22,14 +24,14 @@ require_once "header.php";
                 </form>
             </div>
         </div>
-<?php
-if (!$_SESSION['admin'] == false)
-{ ?>
+    </div>
+<?php }
+else { ?>
         <!-- Форма регистрации -->
-        <div class="row profile_badge container mt-2 justify-content-evenly ms-1" id="teacher_reg">
+        <div class="row container mt-2 justify-content-center" id="teacher_reg">
             <div class="bg-light bg-opacity-75 border border-3 border-info rounded text-left fs-5 p-3 mt-4 col-5">
                 <div class="mb-4 fs-3">
-                    <span>Регистрация учителя</span>
+                    <span>Регистрация работника</span>
                 </div>
                 <form id="reg_form" action="registration.php" method="post" novalidate class="needs-validation">
                 <div class="row">
@@ -64,16 +66,16 @@ if (!$_SESSION['admin'] == false)
                 <div class="row">
                     <div class="input-group mb-3">
                         <span class="input-group-text col-4 d-flex justify-content-center">Пароль</span>
-                        <input required id="regPassword" type="text" class="regPassword form-control" placeholder="" name="password" aria-label="password" aria-describedby="basic-addon6">
+                        <input required id="regPassword" type="password" class="regPassword form-control" placeholder="" name="password" aria-label="password" aria-describedby="basic-addon6">
                     </div>
                 </div>
 
-                <div class="row">
+<!--                 <div class="row">
                     <div class="input-group mb-3">
                         <span class="input-group-text col-4 d-flex justify-content-center">Повторите пароль</span>
                         <input required id="regCheck" type="text" class="regCheck form-control" placeholder="" name="checkpassword" aria-label="password_check" aria-describedby="basic-addon7">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="form-check form-switch my-3">
                     <input class="form-check-input regShowPass" type="checkbox" role="switch" id="regShowPass">
@@ -89,11 +91,8 @@ if (!$_SESSION['admin'] == false)
             </div>
         </div>   
 <?php }
-else {
-    echo("хуй");
-}
 ?>
-    </div>
+</div>
 <?php
 require_once "footer.php";
 ?>

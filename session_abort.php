@@ -1,5 +1,7 @@
 <?php
 session_start();
-$_SESSION['admin'] = false;
-header('Location: index.php');
+unset($_SESSION['admin']);
+unset($_SESSION['worker']);
+unset($_SESSION['student']);
+header("Location: index.php"); 
 ?>

@@ -25,3 +25,20 @@ $('body').on('click', '.regShowPass', function(){
   $('#regPassword').attr('type', 'password');
   }
 });
+
+$('body').on('click', '.authShowPassword', function(){
+  if ($(this).is(':checked')){
+  $('#authPassword').attr('type', 'text');
+  } else {
+  $('#authPassword').attr('type', 'password');
+  }
+});
+
+
+$('body').on('click', '.authShowPasswordWorker', function(){
+  if ($(this).is(':checked')){
+  $('#authPasswordWorker').attr('type', 'text');
+  } else {
+  $('#authPasswordWorker').attr('type', 'password');
+  }
+});

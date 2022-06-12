@@ -20,4 +20,17 @@ body {
   font-size: 22px;
 }
 
+.books_container {
+  width: 1800px;
+}
+
+.card {
+  max-height: 670px;
+  min-width: 400px;
+}
+
+.pdf_container {
+  max-width: 1050px;
+}
+
 /*# sourceMappingURL=style.css.map */

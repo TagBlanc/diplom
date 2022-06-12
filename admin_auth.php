@@ -9,7 +9,6 @@ if ($login == 'root' && $pas == 'root')
 else
     {
       $_SESSION['admin'] = false;
-        echo "хуй";
     }
-    header('Location: admin_panel.php');
+    header("Location: index.php"); 
 ?>
