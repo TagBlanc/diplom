@@ -343,13 +343,6 @@ session_start();
                             </div>
                         </div>
 
-        <!--                 <div class="row">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text col-4 d-flex justify-content-center">Повторите пароль</span>
-                                <input required id="regCheck" type="text" class="regCheck form-control" placeholder="" name="checkpassword" aria-label="password_check" aria-describedby="basic-addon7">
-                            </div>
-                        </div> -->
-
                         <div class="form-check form-switch my-3">
                             <input class="form-check-input regShowPass" type="checkbox" role="switch" id="regShowPass">
                             <label class="form-check-label" for="flexSwitchCheckChecked">Показать пароль</label>
